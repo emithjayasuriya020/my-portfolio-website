@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
 
     // This is where you put your Web3Forms access key
     // You can get one for free at https://web3forms.com/
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "cc7c00bd-254f-4374-b5a2-41b5a2738804");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
