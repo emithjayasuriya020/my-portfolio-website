@@ -20,17 +20,29 @@ const Navbar: React.FC = () => {
       setScrolled(window.scrollY > 20);
       
       const sections = NAV_LINKS.map(link => link.id);
-      for (const section of sections.reverse()) {
+      
+      // Bottom of page check
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+        setActiveSection('contact');
+        return;
+      }
+
+      for (const section of [...sections].reverse()) {
         const element = document.getElementById(section);
-        if (element && window.scrollY >= element.offsetTop - 150) {
-          setActiveSection(section);
-          break;
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // If the top of the section is near or above the top of the viewport
+          if (rect.top <= 160) {
+            setActiveSection(section);
+            break;
+          }
         }
       }
+
       if (window.scrollY < 100) setActiveSection('home');
     };
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
