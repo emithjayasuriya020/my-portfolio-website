@@ -7,14 +7,14 @@ const PROJECT_DATA = [
     date: '2024',
     description: 'A production-grade Java stack management app supporting income/expense tracking, category management, and data summaries.',
     tags: ['SPRING BOOT', 'THYMELEAF', 'MYSQL', 'JAVA'],
-    link: 'https://github.com/emithjayasuriya/personal-finance-tracker',
+    link: 'https://github.com/emithjayasuriya020/personal-finance-tracker',
     type: 'public'
   },
   {
     title: 'Eureka AI Services',
     category: 'AI / BACKEND',
     date: '2024',
-    description: 'Backend services powering the Eureka AI platform — private repository focused on high-performance AI integration.',
+    description: 'Backend services powering the Eureka AI platform — private repository focused on high-performance AI integration. Available upon request.',
     tags: ['PYTHON', 'AI / ML', 'REST API'],
     type: 'private'
   },
@@ -22,7 +22,7 @@ const PROJECT_DATA = [
     title: 'SafePaws',
     category: 'BACKEND',
     date: '2023',
-    description: 'Pet safety and welfare platform built collaboratively as part of a software engineering module.',
+    description: 'Pet safety and welfare platform built collaboratively as part of a software engineering module. Available upon request.',
     tags: ['BACKEND', 'REST API', 'GROUP PROJECT', 'JAVA'],
     type: 'private',
     badge: 'University Group Project'
@@ -33,7 +33,7 @@ const PROJECT_DATA = [
     date: '2024',
     description: 'Processes raw CSV logs from junctions to surface violations and key statistics through rich visual output.',
     tags: ['PYTHON', 'PANDAS', 'MATPLOTLIB'],
-    link: 'https://github.com/emithjayasuriya/python-traffic-visualization',
+    link: 'https://github.com/emithjayasuriya020/python-traffic-visualization',
     type: 'public'
   },
   {
@@ -42,7 +42,7 @@ const PROJECT_DATA = [
     date: '2024',
     description: 'A clean, real-time weather interface pulling live data with intuitive visual hierarchy.',
     tags: ['JAVASCRIPT', 'REST API', 'CSS'],
-    link: 'https://github.com/emithjayasuriya/weather-dashboard',
+    link: 'https://github.com/emithjayasuriya020/weather-dashboard',
     type: 'public'
   },
   {
@@ -51,7 +51,7 @@ const PROJECT_DATA = [
     date: '2024',
     description: 'Marketing landing page for the Eureka AI platform, translating technical offerings into a polished web presence.',
     tags: ['JAVASCRIPT', 'HTML', 'CSS'],
-    link: 'https://github.com/emithjayasuriya/eureka-landing-page',
+    link: 'https://github.com/emithjayasuriya020/eureka-landing-page',
     type: 'public'
   }
 ];
