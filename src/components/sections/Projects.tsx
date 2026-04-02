@@ -53,6 +53,15 @@ const PROJECT_DATA = [
     tags: ['JAVASCRIPT', 'HTML', 'CSS'],
     link: 'https://github.com/emithjayasuriya020/eureka-landing-page',
     type: 'public'
+  },
+  {
+    title: 'Tasker CLI \u26A1',
+    category: 'CLI / GO',
+    date: '2024',
+    description: 'A lightweight command-line task manager built with Go. Features persistent JSON storage for adding, listing, completing, and deleting tasks.',
+    tags: ['GO', 'CLI', 'JSON'],
+    link: 'https://github.com/emithjayasuriya020/tasker-cli',
+    type: 'public'
   }
 ];
 
