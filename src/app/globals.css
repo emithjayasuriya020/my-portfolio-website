@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #faf8f4;
@@ -12,9 +13,31 @@
   --slate: #4a5568;
   --light-slate: #718096;
   --bg-section: #faf8f4;
+  --bg-section-alt: #ffffff;
+  --card-bg: #FDFAF4;
+  --text-muted: #6B5E4E;
+  --text-subtle: #8B7355;
   --border: #ddd6c8;
   --footer: #080f18;
   --gold-border: rgba(201,168,76,0.2);
+}
+
+/* ── Dark Mode Variable Overrides ─────────────────────────── */
+html.dark {
+  --background: #0d1117;
+  --foreground: #e8e3d9;
+  --navy: #e8e3d9;
+  --cream: #161b22;
+  --slate: #8b949e;
+  --light-slate: #6e7681;
+  --bg-section: #0d1117;
+  --bg-section-alt: #161b22;
+  --card-bg: #1c2128;
+  --text-muted: #9ca3af;
+  --text-subtle: #6b7280;
+  --border: #30363d;
+  --gold-border: rgba(201,168,76,0.15);
+  --background-alt: #161b22;
 }
 
 @theme inline {
@@ -25,6 +48,10 @@
   --color-slate: var(--slate);
   --color-light-slate: var(--light-slate);
   --color-bg-section: var(--bg-section);
+  --color-bg-section-alt: var(--bg-section-alt);
+  --color-card-bg: var(--card-bg);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
   --color-border-ui: var(--border);
   --color-footer: var(--footer);
   --color-gold-border: var(--gold-border);
@@ -101,6 +128,18 @@
 .reveal-right.active {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Silky transition across theme changes */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+}
+
+/* But don't slow down animations/transforms */
+.reveal, .reveal-left, .reveal-right, .animate-blob, .animate-float {
+  transition-property: opacity, transform, background-color, border-color, color;
 }
 
 body {

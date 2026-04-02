@@ -55,7 +55,7 @@ const PROJECT_DATA = [
     type: 'public'
   },
   {
-    title: 'Tasker CLI \u26A1',
+    title: 'Tasker CLI ⚡',
     category: 'CLI / GO',
     date: '2024',
     description: 'A lightweight command-line task manager built with Go. Features persistent JSON storage for adding, listing, completing, and deleting tasks.',
@@ -70,52 +70,75 @@ const Projects: React.FC = () => {
     <section id="projects" className="bg-cream px-6 md:px-12 py-24 font-sans overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <div className="reveal-on-scroll reveal">
-          <p className="text-[11px] tracking-[0.18em] text-[#8B7355] font-normal mb-2 uppercase">
+          <p className="text-[11px] tracking-[0.18em] text-gold/70 dark:text-gold font-mono mb-2 uppercase">
             03 — FEATURED WORK
           </p>
-          <h2 className="font-serif text-4xl md:text-[42px] font-light text-[#B8962E] m-0 mb-2 leading-[1.1]">
+          <h2 className="font-serif text-4xl md:text-[42px] font-light text-gold m-0 mb-2 leading-[1.1]">
             Projects
           </h2>
-          <div className="w-10 h-0.5 bg-[#B8962E] my-5 mb-12" />
+          <div className="w-10 h-0.5 bg-gold my-5 mb-12" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECT_DATA.map((project, index) => (
-            <div 
-              key={index} 
-              className={`group relative bg-[#FDFAF4] border border-[#E2D9C8] rounded-xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-[#B8962E] flex flex-col h-full reveal-on-scroll reveal stagger-${(index % 5) + 1}`}
+            <div
+              key={index}
+              className={`group relative
+                bg-[#FDFAF4] dark:bg-[#1a2032]
+                border border-[#E2D9C8] dark:border-[#2d3748]
+                hover:border-gold dark:hover:border-gold/60
+                dark:hover:shadow-[0_0_40px_-8px_rgba(201,168,76,0.25)]
+                rounded-xl p-8
+                transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl
+                flex flex-col h-full
+                reveal-on-scroll reveal stagger-${(index % 5) + 1}`}
             >
               {/* Top Row: Category & Icon */}
               <div className="flex justify-between items-start mb-6">
                 <div className="flex gap-1.5">
-                  <span className="text-[9px] tracking-[0.14em] font-medium text-[#B8962E] bg-[#B8962E]/10 px-2.5 py-1 rounded-sm">{project.category}</span>
+                  <span className="text-[9px] tracking-[0.14em] font-medium text-gold bg-gold/10 dark:bg-gold/15 px-2.5 py-1 rounded-sm">
+                    {project.category}
+                  </span>
                   {project.type === 'private' && (
-                    <span className="text-[9px] tracking-[0.14em] font-medium text-[#6B5E4E] bg-[#6B5E4E]/10 border border-[#6B5E4E]/20 px-2.5 py-1 rounded-sm">PRIVATE</span>
+                    <span className="text-[9px] tracking-[0.14em] font-medium text-[#6B5E4E] dark:text-[#9ca3af] bg-[#6B5E4E]/10 dark:bg-white/5 border border-[#6B5E4E]/20 dark:border-white/10 px-2.5 py-1 rounded-sm">
+                      PRIVATE
+                    </span>
                   )}
                 </div>
                 {project.type === 'public' ? (
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <svg className="w-[18px] h-[18px] text-[#C9B99A] transition-all group-hover:text-[#B8962E] group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <svg
+                      className="w-[18px] h-[18px] text-[#C9B99A] dark:text-gold/40 transition-all group-hover:text-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"
+                    >
                       <path d="M7 17L17 7M17 7H7M17 7v10"/>
                     </svg>
                   </a>
                 ) : (
-                  <svg className="w-4 h-4 text-[#C9B99A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <svg className="w-4 h-4 text-[#C9B99A] dark:text-gold/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
                   </svg>
                 )}
               </div>
 
               {/* Title & Desc */}
-              <h3 className="font-serif text-2xl text-[#1a1a2e] mb-3 group-hover:text-[#B8962E] transition-colors">{project.title}</h3>
-              <p className="text-[13px] text-[#6B5E4E] leading-relaxed mb-6 font-light italic">
+              <h3 className="font-serif text-2xl text-[#1a1a2e] dark:text-[#e8e3d9] mb-3 group-hover:text-gold transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-[13px] text-[#6B5E4E] dark:text-[#a0aec0] leading-relaxed mb-6 font-light italic">
                 {project.description}
               </p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-[9px] font-mono tracking-wider text-[#8B7355] border border-[#D8CCBA] px-2 py-0.5 rounded-sm bg-white">
+                  <span
+                    key={tag}
+                    className="text-[9px] font-mono tracking-wider
+                      text-[#8B7355] border border-[#D8CCBA] bg-white
+                      dark:text-gold/70 dark:border-gold/20 dark:bg-gold/5
+                      px-2 py-0.5 rounded-sm"
+                  >
                     {tag}
                   </span>
                 ))}
@@ -123,10 +146,10 @@ const Projects: React.FC = () => {
 
               {/* Badge for Univ project */}
               {project.badge && (
-                 <div className="mt-4 pt-4 border-t border-[#E2D9C8] flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#B8962E]" />
-                    <span className="text-[10px] text-[#8B7355] italic">{project.badge}</span>
-                 </div>
+                <div className="mt-4 pt-4 border-t border-[#E2D9C8] dark:border-[#2d3748] flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                  <span className="text-[10px] text-[#8B7355] dark:text-gold/60 italic">{project.badge}</span>
+                </div>
               )}
             </div>
           ))}
