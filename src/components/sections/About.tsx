@@ -28,7 +28,7 @@ const About: React.FC = () => {
             </div>
             
             {/* Location badge */}
-            <div className="absolute -bottom-5 -right-4 bg-white/90 backdrop-blur-md px-5 py-3 rounded-xl border border-border-ui shadow-md z-20 reveal-on-scroll reveal stagger-4">
+            <div className="absolute -bottom-5 -right-4 bg-card-bg/90 backdrop-blur-md px-5 py-3 rounded-xl border border-border-ui shadow-md z-20 reveal-on-scroll reveal stagger-4">
               <span className="block text-gold font-mono text-[10px] uppercase tracking-widest mb-0.5">University</span>
               <span className="text-navy font-serif text-sm leading-tight">IIT Sri Lanka<br />
                 <span className="text-light-slate font-sans font-light text-xs">Univ. of Westminster</span>

@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             </button>
             <button 
               onClick={handleDownloadCV}
-              className="px-10 py-5 border border-navy/20 text-navy text-[11px] uppercase tracking-[0.2em] font-mono hover:bg-navy hover:text-white transition-all duration-500"
+              className="px-10 py-5 border border-border-ui text-navy text-[11px] uppercase tracking-[0.2em] font-mono hover:bg-navy hover:text-cream transition-all duration-500"
             >
               Download CV
             </button>
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
           </div>
           
           {/* Subtle floating attribute */}
-          <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-md p-6 rounded-xl border border-border-ui shadow-lg z-20 reveal active stagger-5">
+          <div className="absolute -bottom-6 -left-6 bg-card-bg/90 backdrop-blur-md p-6 rounded-xl border border-border-ui shadow-lg z-20 reveal active stagger-5">
             <span className="block text-gold font-mono text-xs uppercase tracking-widest mb-1">Based in</span>
             <span className="text-navy font-serif text-lg">Sri Lanka</span>
           </div>

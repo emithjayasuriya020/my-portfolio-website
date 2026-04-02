@@ -47,11 +47,11 @@ const Resume: React.FC = () => {
         
         <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
           <div>
-            <p className="text-[11px] tracking-[0.18em] text-[#B8962E] font-mono uppercase mb-2 text-center lg:text-left">
+            <p className="text-[11px] tracking-[0.18em] text-gold font-mono uppercase mb-2 text-center lg:text-left">
               06 — Résumé
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#1a1a2e] text-center lg:text-left">
-              Curriculum <span className="text-[#B8962E] italic">Vitae</span>
+            <h2 className="font-serif text-4xl md:text-5xl text-navy text-center lg:text-left">
+              Curriculum <span className="text-gold italic">Vitae</span>
             </h2>
           </div>
           
@@ -75,18 +75,18 @@ const Resume: React.FC = () => {
           
           {/* Left Column — Education */}
           <div className="flex flex-col space-y-12">
-            <h3 className="text-xs uppercase tracking-[0.3em] font-sans font-bold text-[#1a1a2e]/40 mb-2 reveal-on-scroll reveal stagger-1">Education</h3>
+            <h3 className="text-xs uppercase tracking-[0.3em] font-sans font-bold text-navy/40 mb-2 reveal-on-scroll reveal stagger-1">Education</h3>
             
             {EDUCATION.map((item, index) => (
-              <div key={index} className={`relative pl-8 border-l border-[#E2D9C8] pb-4 reveal-on-scroll reveal-left stagger-${index + 1}`}>
-                <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-[#B8962E]" />
-                <span className="block text-[10px] font-mono text-[#B8962E] uppercase tracking-widest mb-1">
+              <div key={index} className={`relative pl-8 border-l border-border-ui pb-4 reveal-on-scroll reveal-left stagger-${index + 1}`}>
+                <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-gold" />
+                <span className="block text-[10px] font-mono text-gold uppercase tracking-widest mb-1">
                   {item.period}
                 </span>
-                <h4 className="text-[#1a1a2e] font-serif text-xl mb-1">{item.degree}</h4>
-                <p className="text-sm text-[#6B5E4E] font-sans mb-1">{item.institution}</p>
-                {item.subTitle && <p className="text-xs text-[#6B5E4E]/60 italic">{item.subTitle}</p>}
-                {item.details && <p className="text-xs text-[#6B5E4E]/80 mt-2 font-mono uppercase tracking-tighter">{item.details}</p>}
+                <h4 className="text-navy font-serif text-xl mb-1">{item.degree}</h4>
+                <p className="text-sm text-text-muted font-sans mb-1">{item.institution}</p>
+                {item.subTitle && <p className="text-xs text-text-muted/60 italic">{item.subTitle}</p>}
+                {item.details && <p className="text-xs text-text-muted/80 mt-2 font-mono uppercase tracking-tighter">{item.details}</p>}
               </div>
             ))}
           </div>
@@ -96,15 +96,15 @@ const Resume: React.FC = () => {
             
             {/* Experience */}
             <div className="reveal-on-scroll reveal-right stagger-1">
-              <h3 className="text-xs uppercase tracking-[0.3em] font-sans font-bold text-[#1a1a2e]/40 mb-10">Experience</h3>
+              <h3 className="text-xs uppercase tracking-[0.3em] font-sans font-bold text-navy/40 mb-10">Experience</h3>
               {EXPERIENCE.map((item, index) => (
-                <div key={index} className="bg-[#FDFAF4] border border-[#E2D9C8] p-8 rounded-[2px] shadow-sm hover:shadow-md transition-shadow">
-                  <span className="block text-[10px] font-mono text-[#B8962E] uppercase tracking-widest mb-2">
+                <div key={index} className="bg-card-bg border border-border-ui p-8 rounded-[2px] shadow-sm hover:shadow-md transition-shadow">
+                  <span className="block text-[10px] font-mono text-gold uppercase tracking-widest mb-2">
                     {item.period}
                   </span>
-                  <h4 className="text-[#1a1a2e] font-serif text-xl mb-1">{item.role}</h4>
-                  <p className="text-sm font-medium text-[#6B5E4E] mb-4">{item.company}</p>
-                  <p className="text-[13px] text-[#6B5E4E]/80 leading-relaxed italic">
+                  <h4 className="text-navy font-serif text-xl mb-1">{item.role}</h4>
+                  <p className="text-sm font-medium text-text-muted mb-4">{item.company}</p>
+                  <p className="text-[13px] text-text-muted/80 leading-relaxed italic">
                     {item.description}
                   </p>
                 </div>
@@ -113,16 +113,16 @@ const Resume: React.FC = () => {
 
             {/* Certificates */}
             <div className="reveal-on-scroll reveal-right stagger-2">
-              <h3 className="text-xs uppercase tracking-[0.3em] font-sans font-bold text-[#1a1a2e]/40 mb-10">Certificates</h3>
+              <h3 className="text-xs uppercase tracking-[0.3em] font-sans font-bold text-navy/40 mb-10">Certificates</h3>
               {CERTIFICATES.map((item, index) => (
                 <div key={index} className="flex items-start gap-4 group mb-4">
-                  <div className="mt-1 w-2 h-2 rounded-full border border-[#B8962E] group-hover:bg-[#B8962E] transition-colors" />
+                  <div className="mt-1 w-2 h-2 rounded-full border border-gold group-hover:bg-gold transition-colors" />
                   <div>
-                    <h4 className="text-[#1a1a2e] font-serif text-lg leading-tight mb-1">
+                    <h4 className="text-navy font-serif text-lg leading-tight mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-xs text-[#6B5E4E] font-mono tracking-wider">
-                      {item.institution} — <span className="text-[#B8962E] font-bold italic">{item.detail}</span>
+                    <p className="text-xs text-text-muted font-mono tracking-wider">
+                      {item.institution} — <span className="text-gold font-bold italic">{item.detail}</span>
                     </p>
                   </div>
                 </div>
